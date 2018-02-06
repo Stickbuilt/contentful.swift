@@ -39,6 +39,16 @@ public struct Sys {
 
 extension Sys: Decodable {
 
+    public init() {
+        id = ""
+        type = ""
+        createdAt = nil
+        updatedAt = nil
+        locale = nil
+        contentTypeInfo = nil
+        revision = nil
+    }
+
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
